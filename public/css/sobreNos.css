@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100dvb;
+}
+.bgbottom {
+  background-image: linear-gradient(#1f1ead, black);
+}
+.bgtop {
+  background-image: linear-gradient(to top, #1f1ead, black);
+}
+/* COISAS NO MAIN */
+main {
+  background-color: #101728;
+}
+main .bloco {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .bloco img {
+  width: 90%;
+  height: 200px;
+}
+main .integrantes {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+main .integrantes p {
+  margin-left: 4%;
+  margin-right: 4%;
+  text-align: center;
+  justify-content: space-around;
+}
+main .integrantes h4 {
+  font-size: 20px;
+}
+main .marca {
+  display: flex;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+main .marca img {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+main .marca p {
+  color: white;
+  align-content: center;
+}
+main .objetivo .principal {
+  width: 300px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+main .objetivo {
+  display: flex;
+  justify-content: space-around;
+}
+main .objetivo img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 1000px 0 #1f1ead;
+}
+main .objetivo h1 {
+  color: #9340ff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main .objetivo p {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+/* COISAS DO CABEÇALHO */
+header {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+}
+header a,
+img {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* logo ao passar o mouse */
+header img:hover {
+  transition: 1s;
+  cursor: pointer;
+}
+/* logo ao clicar com o mouse */
+header img:active {
+  transition: 0s;
+  box-shadow: 0 0 20px 0 white;
+  background-color: white;
+}
+.lado {
+  display: flex;
+}
+.lado .menu {
+  display: none;
+}
+.lado .lista {
+  display: none;
+}
+/* se a tela de resolução for <= 480px */
+@media (max-width: 480px) {
+  .objetivo {
+    margin-left: 15%;
+    flex-direction: column;
+  }
+  .lado li,
+  .lado a {
+    display: none;
+  }
+  .lado .menu {
+    display: block;
+    filter: invert(100%);
+  }
+  .lado .lista {
+    display: block;
+  }
+  /* menu ao passar o mouse */
+  .lado .menu:hover {
+    transition: 1s;
+    filter: invert(50%);
+  }
+  /* menu ao clicar com o mouse */
+  .lado .menu:active {
+    transition: 0s;
+    box-shadow: 0 0 20px 0 white;
+    background-color: white;
+    filter: invert(20%);
+  }
+}
+/* botões */
+.lado a {
+  height: 25px;
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: none;
+  background-color: white;
+  border-radius: 25px;
+  transition: 0.5s;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  align-content: center;
+}
+/* botões ao passar o mouse */
+.lado a:hover {
+  transition: 1s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+/* botões ao clicar com o mouse */
+.lado a:active {
+  transition: 0s;
+  box-shadow: 0 0 20px 0 white;
+  color: rgb(100, 100, 100);
+  background-color: white;
+}
+.bloco img:active {
+  position: relative;
+  animation-name: beatles;
+  animation-duration: 10s;
+}
+@keyframes beatles {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  10%{
+    left: 0px;
+    top: -50px;
+  }
+  20%{
+    left: 50px;
+    top: -50px;
+  }
+  30%{
+    left: 50px;
+    top: 0px;
+  }
+  40%{
+    left: 50px;
+    top: 50px;
+  }
+  50% {
+    left: 0px;
+    top: 50px;
+  }
+  60% {
+    left: -50px;
+    top: 50px;
+  }
+  70% {
+    left: -50px;
+    top: 0px;
+  }
+  80% {
+    left: -50px;
+    top: -50px;
+  }
+  90% {
+    left: 0px;
+    top: -50px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+/* COISAS DO RODAPÉ */
+footer {
+  height: 200px;
+  box-shadow: white 1px 1px 1px 1px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+footer .contatos-container li {
+  color: white;
+  font-size: 15px;
+  padding-top: 10px;
+  margin-left: 30%;
+}
+footer .contatos-container h2 {
+  color: white;
+}
+.logos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: invert(100%);
+}
+.logos {
+  display: flex;
+  flex-direction: row;
+}
+.logos-container img {
+  margin: 10px;
+  width: 30px;
+}
+/* logo ao passar o mouse */
+.logos-container a img:hover {
+  transition: 1s;
+  cursor: pointer;
+  filter: invert(50%);
+  border-radius: 10px;
+}
+/* logo ao clicar com o mouse */
+.logos-container a img:active {
+  transition: 0s;
+  filter: invert(0);
+  box-shadow: 0 0 10px 5px rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+}
+.containerHeader {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+.mapa_container {
+  display: flex;
+  flex-direction: column;
+}
+.mapa_container .mapa {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.mapa_container h2 {
+  color: white;
+}
+.mapa_container .mapa a {
+  text-decoration: none;
+  color: white;
+}
+.mapa li {
+  padding-top: 10px;
+}
+.mapa_container a:hover {
+  color: #9340ff;
+  transition: 0.1s;
+}
+.mapa_container a:active {
+  color: #ffffff;
+  transition: 0s;
+}

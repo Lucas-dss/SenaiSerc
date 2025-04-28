@@ -1,0 +1,30 @@
+[
+   {
+      "id": 1,
+      "numero": "212",
+      "pontoInicial": "212121",
+      "pontoPartida": "2121212",
+      "horario": "21:21"
+   },
+   {
+      "id": 2,
+      "numero": "601",
+      "pontoInicial": "Rua Favela",
+      "pontoPartida": "Rua Periferia",
+      "horario": "17:30"
+   },
+   {
+      "id": 3,
+      "numero": "601",
+      "pontoInicial": "Rua Favela",
+      "pontoPartida": "Rua Periferia",
+      "horario": "17:30"
+   },
+   {
+      "id": 4,
+      "numero": "212",
+      "pontoInicial": "12121212",
+      "pontoPartida": "1121111",
+      "horario": "12:12"
+   }
+]

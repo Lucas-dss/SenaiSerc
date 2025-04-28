@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "kiwisoda";
+  src: url(KiwiSoda.ttf) format("truetype");
+}
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background: radial-gradient(circle, rgb(22, 0, 118) 0%, black 100%);
+  background-attachment: fixed;
+}
+/* COISAS NO MAIN */
+main .marca {
+  display: flex;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+main .marca img {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+main .marca p {
+  color: white;
+  align-content: center;
+}
+main .bloco {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #1f41bb;
+  height: 550px;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 2000px 0 #1f41bb;
+}
+main .bloco h1 {
+  color: white;
+  font-family: "kiwisoda";
+}
+main .bloco .form-group input {
+  border-radius: 8px;
+  height: 25px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+main .bloco .form-group label {
+  position: relative;
+  text-align: left;
+  left: 30px;
+  top: 19px;
+  font-size: 12px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  transition: 0.5s;
+  opacity: 0;
+}
+main .bloco .form-group:hover label {
+  left: 0;
+  top: 0;
+  font-size: 14px;
+  text-align: left;
+  margin-left: 30px;
+  color: white;
+  transition: 1s;
+  opacity: 100;
+}
+main .blocoregistro {
+  background-color: #042cb8;
+  width: 300px;
+  border-radius: 20px;
+  text-align: center;
+}
+main .blocoregistro a {
+  margin: 10px;
+  color: white;
+}
+main .form-group {
+  display: flex;
+  flex-direction: column;
+}
+/* COISAS DO CABEÇALHO */
+header {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+}
+header a,
+img {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* logo ao passar o mouse */
+header img:hover {
+  transition: 1s;
+  cursor: pointer;
+}
+/* logo ao clicar com o mouse */
+header img:active {
+  transition: 0s;
+  box-shadow: 0 0 20px 0 white;
+  background-color: white;
+}
+.lado {
+  display: flex;
+}
+.lado .menu {
+  display: none;
+}
+.lado .lista {
+  display: none;
+}
+/* se a tela de resolução for <= 480px */
+@media (max-width: 480px) {
+  .lado li,
+  .lado a {
+    display: none;
+  }
+  .lado .menu {
+    display: block;
+    filter: invert(100%);
+  }
+  .lado .lista {
+    display: block;
+  }
+  /* menu ao passar o mouse */
+  .lado .menu:hover {
+    transition: 1s;
+    filter: invert(50%);
+  }
+  /* menu ao clicar com o mouse */
+  .lado .menu:active {
+    transition: 0s;
+    box-shadow: 0 0 20px 0 white;
+    background-color: white;
+    filter: invert(20%);
+  }
+}
+/* botões */
+.lado a {
+  height: 25px;
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: none;
+  background-color: white;
+  border-radius: 25px;
+  transition: 0.5s;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  align-content: center;
+}
+/* botões ao passar o mouse */
+.lado a:hover {
+  transition: 1s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+/* botões ao clicar com o mouse */
+.lado a:active {
+  transition: 0s;
+  box-shadow: 0 0 20px 0 white;
+  color: rgb(100, 100, 100);
+  background-color: white;
+}
+/* COISAS DO RODAPÉ */
+footer {
+  height: 200px;
+  box-shadow: white 1px 1px 1px 1px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+footer .contatos-container li {
+  color: white;
+  font-size: 15px;
+  padding-top: 10px;
+  margin-left: 30%;
+}
+footer .contatos-container h2 {
+  color: white;
+}
+.logos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: invert(100%);
+}
+.logos {
+  display: flex;
+  flex-direction: row;
+}
+.logos-container img {
+  margin: 10px;
+  width: 30px;
+}
+/* logo ao passar o mouse */
+.logos-container img:hover {
+  transition: 1s;
+  cursor: pointer;
+  filter: invert(50%);
+  border-radius: 10px;
+}
+/* logo ao clicar com o mouse */
+.logos-container a img:active {
+  transition: 0s;
+  filter: none;
+  box-shadow: 0 0 15px 1px rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+}
+.containerHeader {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+.mapa_container {
+  display: flex;
+  flex-direction: column;
+}
+.mapa_container .mapa {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.mapa_container h2 {
+  color: white;
+}
+.mapa_container .mapa a {
+  text-decoration: none;
+  color: white;
+}
+.mapa li {
+  padding-top: 10px;
+}
+.mapa_container a:hover {
+  color: #9340ff;
+  transition: 0.1s;
+}
+.mapa_container a:active {
+  color: #ffffff;
+  transition: 0s;
+}
+.blocobotao .button {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: none;
+  background-color: white;
+  border-radius: 25px;
+  transition: 0.5s;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  align-content: center;
+  width: 100px;
+}
+.blocobotao .button:hover {
+  transition: 1s;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+.blocobotao .button:active {
+  transition: 0s;
+  box-shadow: 0 0 20px 0 white;
+  color: rgb(100, 100, 100);
+  background-color: white;
+}

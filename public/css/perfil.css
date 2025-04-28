@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100dvb;
+}
+.bgbottom {
+  background-image: linear-gradient(#1f1ead, black);
+}
+.bgtop {
+  background-image: linear-gradient(to top, #1f1ead, black);
+}
+/* COISAS NO MAIN */
+main .marca {
+  display: flex;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+main .marca a img {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+main .marca p {
+  color: white;
+  align-content: center;
+}
+main .objetivo .principal {
+  width: 300px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: all 1s;
+}
+main .objetivo .principal:hover {
+  transition: all 2s;
+  font-size: 200%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+main .objetivo {
+  display: flex;
+  justify-content: space-around;
+}
+main .objetivo img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 1000px 0 #1f1ead;
+}
+main .objetivo .onibus:active {
+  position: relative;
+  animation-delay: 2s;
+  animation-name: onibus;
+  animation-duration: 10s;
+}
+@keyframes onibus {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 20px;
+  }
+  55% {
+    left: 70px;
+  }
+  85% {
+    left: 170px;
+    filter: opacity(100%);
+  }
+  100% {
+    left: 800px;
+    filter: opacity(0%);
+  }
+}
+main .objetivo h1 {
+  color: #9340ff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main .objetivo p {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+/* COISAS DO CABEÇALHO */
+header {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+}
+header a,
+img {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* logo ao passar o mouse */
+header img:hover {
+  transition: 1s;
+  cursor: pointer;
+}
+/* logo ao clicar com o mouse */
+header img:active {
+  transition: 0s;
+  box-shadow: 0 0 20px 0 white;
+  background-color: white;
+}
+.lado {
+  display: flex;
+}
+.lado .menu {
+  display: none;
+}
+.dropdown-content {
+  display: block;
+  position: absolute;
+}
+.dropdown-content .perfil {
+  display: flex;
+}
+.dropdown-content .perfil img {
+  border-radius: 50px;
+  width: 0px;
+}
+/* se a tela de resolução for <= 480px */
+@media (max-width: 480px) {
+  .objetivo {
+    margin-left: 15%;
+    flex-direction: column;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    color: black;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: -100px;
+    height: 0;
+    transition: 0.4s;
+  }
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    height: 0px;
+    display: flex;
+    width: 100px;
+    color: transparent;
+    transition: 0.5s all;
+  }
+  .dropdown-content a img {
+    width: 0px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    height: 100px;
+    transition: 1s;
+    display: block;
+    box-shadow: 0px 18px 16px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.6s ease-out;
+  }
+  .dropdown:hover .dropdown-content a img {
+    width: 20px;
+  }
+  .dropdown:hover a {
+    height: 20px;
+    display: flex;
+    transition: 1s;
+    margin-bottom: 10px;
+    color: black;
+  }
+  .button {
+    display: none;
+  }
+  .lado .menu {
+    display: block;
+    filter: invert(100%);
+  }
+  /* menu ao passar o mouse */
+  .lado .menu:hover {
+    transition: 1s;
+    filter: invert(50%);
+  }
+  /* menu ao clicar com o mouse */
+  .lado .menu:active {
+    transition: 0s;
+    box-shadow: 0 0 20px 0 white;
+    background-color: white;
+    filter: invert(20%);
+  }
+}
+/* botões */
+.lado .button {
+  height: 25px;
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: none;
+  background-color: white;
+  border-radius: 25px;
+  transition: 0.5s;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  align-content: center;
+}
+/* botões ao passar o mouse */
+.lado a:hover {
+  transition: 1s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+/* botões ao clicar com o mouse */
+.lado a:active {
+  transition: 0s;
+  box-shadow: 0 0 20px 0 white;
+  color: rgb(100, 100, 100);
+  background-color: white;
+}
+/* COISAS DO RODAPÉ */
+footer {
+  height: 180px;
+  box-shadow: white 1px 1px 1px 1px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+footer .contatos-container li {
+  color: white;
+  font-size: 15px;
+  padding-top: 10px;
+}
+footer .contatos-container h2 {
+  color: white;
+}
+hr {
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.direitosAutorais {
+  background-color: black;
+}
+.direitosAutorais p {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  height: 50px;
+}
+.logos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: invert(100%);
+}
+.logos {
+  display: flex;
+  flex-direction: row;
+}
+.logos-container img {
+  margin: 10px;
+  width: 30px;
+}
+/* logo ao passar o mouse */
+.logos-container a img:hover {
+  transition: 1s;
+  cursor: pointer;
+  filter: invert(50%);
+  border-radius: 10px;
+}
+/* logo ao clicar com o mouse */
+.logos-container a img:active {
+  transition: 0s;
+  filter: invert(0);
+  box-shadow: 0 0 10px 5px rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+}
+.containerHeader {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+.mapa_container {
+  display: flex;
+  flex-direction: column;
+}
+.mapa_container .mapa {
+  display: flex;
+  flex-direction: column;
+}
+.mapa_container h2 {
+  color: white;
+}
+.mapa_container .mapa a {
+  text-decoration: none;
+  color: white;
+}
+.mapa li {
+  padding-top: 10px;
+}
+.mapa_container a:hover {
+  color: #9340ff;
+  transition: 0.1s;
+}
+.mapa_container a:active {
+  color: #ffffff;
+  transition: 0s;
+}
+.perfil {
+  display: flex;
+  width: 90%;
+  height: 500px;
+  background-color: #f1f1f1;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+}
+.perfil-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+.perfil-content img {
+  border-radius: 50%;
+  width: 100%;
+  transition: all 1s;
+}
+.perfil-content img:hover {
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 120%;
+}
+.perfil-info{
+    display: flex;
+    flex-direction: column;
+}
+.perfil-info h1 {
+  color: darkslateblue;
+}
+select{
+    margin-top: 10px;
+}
+input{
+    height: 100px;
+    margin-top: 10px;
+}
