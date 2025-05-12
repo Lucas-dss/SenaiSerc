@@ -2,8 +2,8 @@ const db = require('../config/db');
 
 // Cria um novo usuário no banco de dados
 exports.create = (usuario, callback) => {
-  const sql = 'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)';
-  db.query(sql, [usuario.nome, usuario.email, usuario.senha], (err, result) => {
+  const sql = 'INSERT INTO usuarios (email, senha) VALUES (?, ?)';
+  db.query(sql, [usuario.email, usuario.senha], (err, result) => {
     if (err) {
       return callback(err);
     }

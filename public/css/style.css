@@ -4,6 +4,7 @@
 }
 body {
   height: 100dvb;
+  min-width: 365px;
 }
 .bgbottom {
   background-image: linear-gradient(#1f1ead, black);
@@ -42,7 +43,24 @@ main .objetivo .principal:hover {
   margin-top: auto;
   margin-bottom: auto;
 }
+main .objetivo .principal-row {
+  width: 300px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: all 1s;
+}
+main .objetivo .principal-row:hover {
+  transition: all 2s;
+  font-size: 200%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 main .objetivo {
+  display: flex;
+  justify-content: space-around;
+}
+main .objetivo-row {
   display: flex;
   justify-content: space-around;
 }
@@ -80,7 +98,16 @@ main .objetivo h1 {
   color: #9340ff;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+main .objetivo-row h1 {
+  color: #9340ff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 main .objetivo p {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+main .objetivo-row p {
   color: white;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
@@ -118,93 +145,16 @@ header img:active {
 .lado .menu {
   display: none;
 }
-.dropdown-content{
+.dropdown-content {
   display: block;
   position: absolute;
 }
-.dropdown-content .perfil{
-  display:flex;
+.dropdown-content .perfil {
+  display: flex;
 }
-.dropdown-content .perfil img{
+.dropdown-content .perfil img {
   border-radius: 50px;
   width: 0px;
-}
-/* se a tela de resolução for <= 480px */
-@media (max-width: 480px) {
-  .objetivo {
-    margin-left: 15%;
-    flex-direction: column;
-  }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-content {
-    display: block;
-    position: absolute;
-    color: black;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    left: -100px;
-    height: 0;
-    transition: 0.4s;
-  }
-  .dropdown-content a{
-    color: black;
-    text-decoration: none;
-    height: 0px;
-    display: flex;
-    width: 100px;
-    color: transparent;
-    transition: 0.5s all;
-  }
-  .dropdown-content a img{
-    width: 0px;
-    transition: 0.5s ease-in-out;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-
-  .dropdown:hover .dropdown-content {
-    height: 100px;
-    transition: 1s;
-    display: block;
-    box-shadow: 0px 18px 16px 10px rgba(0, 0, 0, 0.2);
-    transition: 0.6s ease-out;
-  }
-  .dropdown:hover .dropdown-content a img{
-    width: 20px;
-  }
-  .dropdown:hover a {
-    height: 20px;
-    display: flex;
-    transition: 1s;
-    margin-bottom: 10px;
-    color: black;
-  }
-  .button {
-    display: none;
-  }
-  .lado .menu {
-    display: block;
-    filter: invert(100%);
-  }
-  /* menu ao passar o mouse */
-  .lado .menu:hover {
-    transition: 1s;
-    filter: invert(50%);
-  }
-  /* menu ao clicar com o mouse */
-  .lado .menu:active {
-    transition: 0s;
-    box-shadow: 0 0 20px 0 white;
-    background-color: white;
-    filter: invert(20%);
-  }
 }
 /* botões */
 .lado .button {
@@ -332,4 +282,139 @@ hr {
 .mapa_container a:active {
   color: #ffffff;
   transition: 0s;
+}
+
+@media screen and (max-width: 700px) {
+  .objetivo {
+    margin: 40px;
+  }
+  .objetivo img {
+    width: 200px;
+  }
+  .principal h1 {
+    font-size: 27px;
+  }
+  .objetivo-row {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    padding: 40px;
+    justify-content: space-around;
+  }
+  footer h2{
+    font-size: 18px;
+  }
+  footer ul{
+    width: 100px;
+    margin-left: 50px;
+  }
+  .logos-container img {
+    width: 25px;
+  }
+}
+/* se a tela de resolução for <= 480px */
+@media (max-width: 500px) {
+  .objetivo {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  .objetivo img {
+    width: 100px;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    color: black;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: -100px;
+    height: 0;
+    transition: 0.4s;
+  }
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    height: 0px;
+    display: flex;
+    width: 100px;
+    color: transparent;
+    transition: 0.5s all;
+    margin: 10px;
+  }
+  .dropdown-content a:hover {
+    width: 90%;
+    margin: 10px;
+    background-color: #f1f1f1;
+  }
+  .dropdown-content a img {
+    width: 0;
+    margin: 0;
+    margin-right: 10px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    height: 100px;
+    transition: 1s;
+    display: block;
+    box-shadow: 0px 18px 16px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.6s ease-out;
+  }
+  .dropdown:hover .dropdown-content a img {
+    width: 20px;
+  }
+  .dropdown:hover a {
+    height: 20px;
+    display: flex;
+    transition: 1s;
+    margin-bottom: 10px;
+    color: black;
+  }
+  .button {
+    display: none;
+  }
+  .lado .menu {
+    display: block;
+    filter: invert(100%);
+  }
+  /* menu ao passar o mouse */
+  .lado .menu:hover {
+    transition: 1s;
+    filter: invert(50%);
+  }
+  /* menu ao clicar com o mouse */
+  .lado .menu:active {
+    transition: 0s;
+    box-shadow: 0 0 20px 0 white;
+    background-color: white;
+    filter: invert(20%);
+  }
+  footer {
+    padding: 10px;
+    justify-content: space-evenly;
+  }
+  footer h2{
+    font-size: 12px;
+  }
+  footer ul{
+    width: 50px;
+    margin-left: 30px;
+  }
+  .logos-container img {
+    width: 20px;
+  }
 }

@@ -33,8 +33,8 @@ function verificarLogin() {
   // alert(JSON.stringify(info.email));
   }
   else{
-    alert(email + ", " + senha);
-    return(email, senha)
+    // alert(email + ", " + senha);
+    // return(email, senha)
   }
 }
 function verificarCadastro() {

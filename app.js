@@ -32,7 +32,7 @@ const responsaveisRoutes = require("./routes/responsaveisRoutes");
 app.use("/api/responsaveis", responsaveisRoutes);
 
 // Roteamento de páginas HTML
-app.get("/", (req, res) => {
+app.get("/index", (req, res) => {
   res.sendFile(path.join(__dirname, "public/pages/index.html"));
 });
 
@@ -53,7 +53,7 @@ app.get("/esqueciSenha", (req, res) => {
 });
 
 app.get("/linhaOnibus", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/pages/linhaOnib.html"));
+  res.sendFile(path.join(__dirname, "public/pages/linhaOnibus.html"));
 });
 
 app.get("/perfil", (req, res) => {
@@ -74,5 +74,5 @@ app.post("cadastro", (req, res) => {
 
 // Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em http://localhost:${PORT}/index`);
 });
