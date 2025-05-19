@@ -199,29 +199,52 @@ header img:active {
 }
 /* COISAS DO RODAPÉ */
 footer {
-  height: 200px;
+  width: 100%;
+  height: 190px;
   box-shadow: white 1px 1px 1px 1px;
   background-color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  padding-top: 20px;
+}
+footer .contatos-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 footer .contatos-container li {
   color: white;
   font-size: 15px;
   padding-top: 10px;
-  margin-left: 30%;
 }
 footer .contatos-container h2 {
   color: white;
 }
+hr {
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.direitosAutorais {
+  background-color: black;
+}
+.direitosAutorais p {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  height: 30px;
+}
 .logos-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   filter: invert(100%);
+  padding: 20px;
 }
 .logos {
   display: flex;
@@ -251,62 +274,85 @@ footer .contatos-container h2 {
   justify-content: space-between;
   height: 50px;
 }
-.mapa_container {
+footer .mapa_container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
 }
-.mapa_container .mapa {
-  display: flex;
-  flex-direction: column;
-  margin-left: 20px;
+footer .mapa_container .mapa {
+  color: white;
+  font-size: 15px;
 }
-.mapa_container h2 {
+footer .mapa_container h2 {
   color: white;
 }
-.mapa_container .mapa a {
+footer .mapa li {
+  color: white;
+  font-size: 15px;
+  padding-top: 10px;
+}
+footer .mapa_container .mapa a {
   text-decoration: none;
   color: white;
 }
-.mapa li {
-  padding-top: 10px;
-}
-.mapa_container a:hover {
+footer .mapa_container a:hover {
   color: #9340ff;
   transition: 0.1s;
 }
-.mapa_container a:active {
+footer .mapa_container a:active {
   color: #ffffff;
   transition: 0s;
 }
 @media screen and (max-width: 700px) {
-  .objetivo {
-    margin: 40px;
+  main .objetivo .principal {
+    padding: 30px;
   }
-  .objetivo img {
-    width: 200px;
+  main .objetivo img{
+    margin: 30px
   }
   .principal h1 {
     font-size: 27px;
   }
-  .objetivo-row {
+  main .objetivo .principal p {
+    font-size: 15px;
+  }
+  main .objetivo-row {
     margin: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  main .objetivo-row .principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   footer {
-    padding: 40px;
+    height: 170px;
     justify-content: space-around;
   }
-  footer h2{
+  footer h2 {
     font-size: 18px;
   }
-  footer ul{
+  footer ul {
     width: 100px;
-    margin-left: 50px;
+    margin-left: 0;
   }
-  .logos-container img {
+  footer .logos-container img {
     width: 25px;
+  }
+  footer .mapa_container .mapa {
+    margin-left: 0;
+  }
+  footer .contatos-container li {
+    font-size: 12px;
+    width: 70px;
+  }
+  footer .mapa_container li {
+    font-size: 12px;
+    width: 60px;
   }
 }
 /* se a tela de resolução for <= 480px */
@@ -314,10 +360,20 @@ footer .contatos-container h2 {
   .objetivo {
     flex-direction: column;
     align-items: center;
-    margin: 20px;
   }
-  .objetivo img {
-    width: 100px;
+  .objetivo-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .objetivo img {
+    flex: none;
+    width: 90%;
+  }
+  main .objetivo .principal p {
+    font-size: 15px;
+  }
+  main .objetivo-row .principal p{
+    font-size:15px;
   }
   .dropdown {
     position: relative;
@@ -398,17 +454,32 @@ footer .contatos-container h2 {
     filter: invert(20%);
   }
   footer {
-    padding: 10px;
+    height: 140px;
     justify-content: space-evenly;
   }
-  footer h2{
+  footer h2 {
     font-size: 12px;
   }
-  footer ul{
-    width: 50px;
-    margin-left: 30px;
+  footer .mapa_container .mapa {
+    margin-left: 0;
   }
-  .logos-container img {
+  footer ul {
+    width: 50px;
+    margin-left: 0;
+  }
+  footer .contatos-container li {
+    font-size: 10px;
+    width: 60px;
+  }
+  footer .mapa_container li {
+    font-size: 10px;
+    width: 50px;
+  }
+  footer .logos-container img {
     width: 20px;
+  }
+  .direitosAutorais p {
+    font-size: 10px;
+    height: 20px;
   }
 }

@@ -7,3 +7,4 @@ CREATE TABLE usuarios (
     senha VARCHAR(255) NOT NULL
 );
 SELECT * FROM db_usuarios.usuarios;
+

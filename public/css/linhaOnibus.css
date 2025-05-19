@@ -4,6 +4,7 @@
 }
 body {
   height: 100dvb;
+  min-width: 365px;
 }
 /* COISAS NO MAIN */
 main .marca {
@@ -304,7 +305,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
 }
 .linha-container {
   display: flex;
@@ -315,7 +315,8 @@ main {
   padding: 10px 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  height: 550px;
+  margin: 100px;
+  height: 500px;
   width: 350px;
 }
 .linha-container h1 {
@@ -349,46 +350,34 @@ textarea {
   resize: none;
 }
 @media screen and (max-width: 700px) {
-  .objetivo {
-    margin: 40px;
-  }
-  .objetivo img {
-    width: 200px;
-  }
-  .principal h1 {
-    font-size: 27px;
-  }
-  .objetivo-row {
-    margin: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   footer {
-    padding: 40px;
+    height: 180px;
     justify-content: space-around;
   }
-  footer h2{
+  footer h2 {
     font-size: 18px;
   }
-  footer ul{
+  footer ul {
     width: 100px;
-    margin-left: 50px;
+    margin-left: 0;
   }
-  .logos-container img {
+  footer .logos-container img {
     width: 25px;
+  }
+  footer .mapa_container .mapa {
+    margin-left: 0;
+  }
+  footer .contatos-container li {
+    font-size: 12px;
+    width: 70px;
+  }
+  footer .mapa_container li {
+    font-size: 12px;
+    width: 60px;
   }
 }
 /* se a tela de resolução for <= 480px */
 @media (max-width: 500px) {
-  .objetivo {
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-  }
-  .objetivo img {
-    width: 100px;
-  }
   .dropdown {
     position: relative;
     display: inline-block;
@@ -468,17 +457,28 @@ textarea {
     filter: invert(20%);
   }
   footer {
-    padding: 10px;
+    height: 160px;
     justify-content: space-evenly;
   }
-  footer h2{
+  footer h2 {
     font-size: 12px;
   }
-  footer ul{
-    width: 50px;
-    margin-left: 30px;
+  footer .mapa_container .mapa {
+    margin-left: 0;
   }
-  .logos-container img {
+  footer ul {
+    width: 50px;
+    margin-left: 0;
+  }
+  footer .contatos-container li {
+    font-size: 10px;
+    width: 60px;
+  }
+  footer .mapa_container li {
+    font-size: 10px;
+    width: 50px;
+  }
+  footer .logos-container img {
     width: 20px;
   }
 }

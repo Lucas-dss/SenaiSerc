@@ -4,12 +4,7 @@
 }
 body {
   height: 100dvb;
-}
-.bgbottom {
-  background-image: linear-gradient(#1f1ead, black);
-}
-.bgtop {
-  background-image: linear-gradient(to top, #1f1ead, black);
+  min-width: 365px;
 }
 /* COISAS NO MAIN */
 main {
@@ -33,13 +28,20 @@ main .integrantes {
   margin: 10px;
 }
 main .integrantes p {
-  margin-left: 4%;
-  margin-right: 4%;
   text-align: center;
   justify-content: space-around;
+  font-size: 13px;
+  flex: 1;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 70px;
 }
 main .integrantes h4 {
+  text-align: center;
+  justify-content: space-around;
   font-size: 20px;
+  flex: 1;
 }
 main .marca {
   display: flex;
@@ -57,30 +59,6 @@ main .marca img {
 main .marca p {
   color: white;
   align-content: center;
-}
-main .objetivo .principal {
-  width: 300px;
-  display: block;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-main .objetivo {
-  display: flex;
-  justify-content: space-around;
-}
-main .objetivo img {
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 0 1000px 0 #1f1ead;
-}
-main .objetivo h1 {
-  color: #9340ff;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-main .objetivo p {
-  color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 20px;
 }
 /* COISAS DO CABEÇALHO */
 header {
@@ -120,10 +98,6 @@ header img:active {
 }
 /* se a tela de resolução for <= 480px */
 @media (max-width: 480px) {
-  .objetivo {
-    margin-left: 15%;
-    flex-direction: column;
-  }
   .lado li,
   .lado a {
     display: none;
@@ -189,19 +163,19 @@ header img:active {
     left: 0px;
     top: 0px;
   }
-  10%{
+  10% {
     left: 0px;
     top: -50px;
   }
-  20%{
+  20% {
     left: 50px;
     top: -50px;
   }
-  30%{
+  30% {
     left: 50px;
     top: 0px;
   }
-  40%{
+  40% {
     left: 50px;
     top: 50px;
   }
@@ -249,29 +223,52 @@ header img:active {
 }
 /* COISAS DO RODAPÉ */
 footer {
-  height: 200px;
+  width: 100%;
+  height: 190px;
   box-shadow: white 1px 1px 1px 1px;
   background-color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  padding-top: 20px;
+}
+footer .contatos-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 footer .contatos-container li {
   color: white;
   font-size: 15px;
   padding-top: 10px;
-  margin-left: 30%;
 }
 footer .contatos-container h2 {
   color: white;
 }
+hr {
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.direitosAutorais {
+  background-color: black;
+}
+.direitosAutorais p {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  height: 30px;
+}
 .logos-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   filter: invert(100%);
+  padding: 20px;
 }
 .logos {
   display: flex;
@@ -301,62 +298,85 @@ footer .contatos-container h2 {
   justify-content: space-between;
   height: 50px;
 }
-.mapa_container {
+footer .mapa_container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
 }
-.mapa_container .mapa {
-  display: flex;
-  flex-direction: column;
-  margin-left: 20px;
+footer .mapa_container .mapa {
+  color: white;
+  font-size: 15px;
 }
-.mapa_container h2 {
+footer .mapa_container h2 {
   color: white;
 }
-.mapa_container .mapa a {
+footer .mapa li {
+  color: white;
+  font-size: 15px;
+  padding-top: 10px;
+}
+footer .mapa_container .mapa a {
   text-decoration: none;
   color: white;
 }
-.mapa li {
-  padding-top: 10px;
-}
-.mapa_container a:hover {
+footer .mapa_container a:hover {
   color: #9340ff;
   transition: 0.1s;
 }
-.mapa_container a:active {
+footer .mapa_container a:active {
   color: #ffffff;
   transition: 0s;
 }
 @media screen and (max-width: 700px) {
-  .objetivo {
-    margin: 40px;
+  main .objetivo .principal {
+    padding: 30px;
   }
-  .objetivo img {
-    width: 200px;
+  main .objetivo img{
+    margin: 30px
   }
   .principal h1 {
     font-size: 27px;
   }
-  .objetivo-row {
+  main .objetivo .principal p {
+    font-size: 15px;
+  }
+  main .objetivo-row {
     margin: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  main .objetivo-row .principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   footer {
-    padding: 40px;
+    height: 170px;
     justify-content: space-around;
   }
-  footer h2{
+  footer h2 {
     font-size: 18px;
   }
-  footer ul{
+  footer ul {
     width: 100px;
-    margin-left: 50px;
+    margin-left: 0;
   }
-  .logos-container img {
+  footer .logos-container img {
     width: 25px;
+  }
+  footer .mapa_container .mapa {
+    margin-left: 0;
+  }
+  footer .contatos-container li {
+    font-size: 12px;
+    width: 70px;
+  }
+  footer .mapa_container li {
+    font-size: 12px;
+    width: 60px;
   }
 }
 /* se a tela de resolução for <= 480px */
@@ -364,10 +384,26 @@ footer .contatos-container h2 {
   .objetivo {
     flex-direction: column;
     align-items: center;
-    margin: 20px;
   }
-  .objetivo img {
-    width: 100px;
+  .objetivo-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .objetivo img {
+    flex: none;
+    width: 90%;
+  }
+  main .objetivo .principal p {
+    font-size: 15px;
+  }
+  main .objetivo-row .principal p{
+    font-size:15px;
+  }
+  main .integrantes p {
+    flex: none;
+    padding: 0;
+    width: 10%;
+    font-size: 10px;
   }
   .dropdown {
     position: relative;
@@ -448,17 +484,32 @@ footer .contatos-container h2 {
     filter: invert(20%);
   }
   footer {
-    padding: 10px;
+    height: 140px;
     justify-content: space-evenly;
   }
-  footer h2{
+  footer h2 {
     font-size: 12px;
   }
-  footer ul{
-    width: 50px;
-    margin-left: 30px;
+  footer .mapa_container .mapa {
+    margin-left: 0;
   }
-  .logos-container img {
+  footer ul {
+    width: 50px;
+    margin-left: 0;
+  }
+  footer .contatos-container li {
+    font-size: 10px;
+    width: 60px;
+  }
+  footer .mapa_container li {
+    font-size: 10px;
+    width: 50px;
+  }
+  footer .logos-container img {
     width: 20px;
+  }
+  .direitosAutorais p {
+    font-size: 10px;
+    height: 20px;
   }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SenaiSurc</title>
-    <link rel="stylesheet" href="../css/linhaOnibus.css" />
+    <link rel="stylesheet" href="../css/admLinhaOnibus.css"/>
   </head>
   <body>
     <header>
@@ -37,41 +37,66 @@
       <br />
       <br />
       <br />
-      <div class="linha-container">
-        <h1>Nova linha</h1>
-        <form action="/api/usuarios/linhas" method="POST">
+      <br />
+      <div class="containerForms">
+        <form action="/api/linhas/register" method="POST" class="linha-container">
+          <h1>Nova linha</h1>
           <div class="form-group">
             <label for="numero">Número do Ônibus:</label>
             <input
               type="text"
-              name="numero"
-              id="numero"
+              name="id"
+              id="id"
               maxlength="3"
               required
             />
           </div>
           <div class="form-group">
-            <label for="pontoInicial">Ponto de Inicial</label>
+            <label for="pontoInicial">Ponto de Inicial:</label>
             <input type="text" name="pontoInicial" id="pontoInicial" required />
           </div>
           <div class="form-group">
-            <label for="pontoPartida">Ponto de Partida</label>
-            <input type="text" name="pontoPartida" id="pontoPartida" required />
+            <label for="pontoParadas">Paradas:</label>
+            <input type="text" name="pontoParadas" id="pontoParadas" required />
           </div>
           <div class="form-group">
-            <label for="horario">Horário</label>
+            <label for="pontoFinal">Ponto Final:</label>
+            <input type="text" name="pontoFinal" id="pontoFinal" required />
+          </div>
+          <div class="form-group">
+            <label for="horario">Adicionar Horários de Partida:</label>
             <input type="time" name="horario" id="horario" required />
           </div>
           <div class="form-group">
             <label for="status">Status:</label>
             <select id="status" name="status">
-              <option value="pendente">Pendente</option>
-              <option value="andamento">Em andamento</option>
-              <option value="concluida">Concluída</option>
+              <option value=1>Ativo</option>
+              <option value=0>Desativado</option>
             </select>
           </div>
           <div class="form-group">
             <button type="submit">Salvar Linha</button>
+          </div>
+        </form>
+        <form action="/api/linhas/searchAll" method="get" class="linha-container" id="formsMostrar">
+          <h1>Linhas já cadastradas</h1>
+          <div class="form-group">
+            <label for="mostrarNumeroOnibus">Número do ônibus:</label>
+            <select name="mostrarNumeroOnibus" id="mostrarNumeroOnibus">
+              <option value="" id="option"></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mostrarPontoInicial">Ponto Inicial:</label>
+            <select name="mostrarPontoInicial" id="mostrarPontoInicial">
+              <option value=""></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mostrarPontoParadas">Paradas: </label>
+            <select name="mostrarPontoParadas" id="mostrarPontoParadas">
+              <option value=""></option>
+            </select>
           </div>
         </form>
       </div>
@@ -111,6 +136,18 @@
       <hr />
       <p>© 2025 SenaiSurc - Todos os direitos reservados.</p>
     </div>
+    <script>
+      fetch('/searchAll')
+      .then(response => response.json())
+      .then(linhas => {
+        const select = document.getElementById('mostrarNumeroOnibus');
+        linhas.forEach(linhas => {
+          const option = document.createElement('option');
+          option.textContent = `${linhas.id}`;
+          select.appendChild(option);
+        });
+      });
+    </script>
   </body>
   <script src="../js/linhas.js"></script>
 </html>
