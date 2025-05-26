@@ -53,7 +53,7 @@ app.get("/cadastroAdm", (req, res) => {
 });
 
 app.get("/esqueciSenha", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/pages/index.html"));
+  res.sendFile(path.join(__dirname, "public/pages/esqueciSenha.html"));
 });
 
 app.get("/linhaOnibus", (req, res) => {

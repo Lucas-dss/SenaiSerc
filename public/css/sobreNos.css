@@ -48,13 +48,16 @@ main .marca {
   position: fixed;
   right: 10px;
   bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  padding-left: 0;
+  padding-right: 10px;
 }
-main .marca img {
+main .marca a img {
   width: 50px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: auto;
-  margin-bottom: auto;
+  display: flex;
 }
 main .marca p {
   color: white;
@@ -73,19 +76,13 @@ img {
   width: 50px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: auto;
-  margin-bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* logo ao passar o mouse */
 header img:hover {
-  transition: 1s;
   cursor: pointer;
-}
-/* logo ao clicar com o mouse */
-header img:active {
-  transition: 0s;
-  box-shadow: 0 0 20px 0 white;
-  background-color: white;
 }
 .lado {
   display: flex;

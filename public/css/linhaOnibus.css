@@ -12,13 +12,16 @@ main .marca {
   position: fixed;
   right: 10px;
   bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  padding-left: 0;
+  padding-right: 10px;
 }
 main .marca a img {
   width: 50px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: auto;
-  margin-bottom: auto;
+  display: flex;
 }
 main .marca p {
   color: white;
@@ -37,19 +40,13 @@ img {
   width: 50px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: auto;
-  margin-bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* logo ao passar o mouse */
 header img:hover {
-  transition: 1s;
   cursor: pointer;
-}
-/* logo ao clicar com o mouse */
-header img:active {
-  transition: 0s;
-  box-shadow: 0 0 20px 0 white;
-  background-color: white;
 }
 .lado {
   display: flex;
@@ -193,7 +190,7 @@ header img:active {
   border-radius: 50px;
   width: 0px;
 }
-form button{
+form button {
   background-color: black;
   color: white;
   border: none;
@@ -205,16 +202,21 @@ form button{
 }
 /* COISAS DO RODAPÉ */
 footer {
-  height: 180px;
+  width: 100%;
+  height: 190px;
   box-shadow: white 1px 1px 1px 1px;
   background-color: black;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
-  padding-top: 20px;
-  padding-left: 70px;
-  padding-right: 70px;
+}
+footer .contatos-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 footer .contatos-container li {
   color: white;
@@ -237,13 +239,15 @@ hr {
   display: flex;
   justify-content: center;
   margin: 10px;
-  height: 50px;
+  height: 30px;
 }
 .logos-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   filter: invert(100%);
+  padding: 20px;
 }
 .logos {
   display: flex;
@@ -263,9 +267,9 @@ hr {
 /* logo ao clicar com o mouse */
 .logos-container a img:active {
   transition: 0s;
-  filter: invert(0);
   box-shadow: 0 0 10px 5px rgb(0, 0, 0);
   background-color: rgb(0, 0, 0);
+  filter: invert(0);
 }
 .containerHeader {
   background-color: black;
@@ -273,40 +277,47 @@ hr {
   justify-content: space-between;
   height: 50px;
 }
-.mapa_container {
+footer .mapa_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+}
+footer .mapa_container {
   display: flex;
   flex-direction: column;
 }
-.mapa_container .mapa {
+footer .mapa_container .mapa {
   display: flex;
   flex-direction: column;
 }
-.mapa_container h2 {
+footer .mapa_container h2 {
   color: white;
 }
-.mapa_container .mapa a {
+footer .mapa_container .mapa a {
   text-decoration: none;
   color: white;
 }
-.mapa li {
+footer .mapa li {
   padding-top: 10px;
 }
-.mapa_container a:hover {
+footer .mapa_container a:hover {
   color: #9340ff;
   transition: 0.1s;
 }
-.mapa_container a:active {
+footer .mapa_container a:active {
   color: #ffffff;
   transition: 0s;
 }
 main {
-  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .linha-container {
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -351,7 +362,7 @@ textarea {
 }
 @media screen and (max-width: 700px) {
   footer {
-    height: 180px;
+    height: 170px;
     justify-content: space-around;
   }
   footer h2 {

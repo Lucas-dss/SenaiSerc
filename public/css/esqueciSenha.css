@@ -14,13 +14,16 @@ main .marca {
   position: fixed;
   right: 10px;
   bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  padding-left: 0;
+  padding-right: 10px;
 }
-main .marca img {
+main .marca a img {
   width: 50px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: auto;
-  margin-bottom: auto;
+  display: flex;
 }
 main .marca p {
   color: white;
@@ -53,11 +56,11 @@ main .bloco label {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-.g-recaptcha{
+.g-recaptcha {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.buttonEnviar{
+.buttonEnviar {
   margin-bottom: 10px;
   height: 30px;
   width: 100px;
@@ -101,19 +104,13 @@ img {
   width: 50px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: auto;
-  margin-bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* logo ao passar o mouse */
 header img:hover {
-  transition: 1s;
   cursor: pointer;
-}
-/* logo ao clicar com o mouse */
-header img:active {
-  transition: 0s;
-  box-shadow: 0 0 20px 0 white;
-  background-color: white;
 }
 .lado {
   display: flex;
@@ -126,7 +123,8 @@ header img:active {
 }
 /* se a tela de resolução for <= 480px */
 @media (max-width: 480px) {
-  .lado li, .lado a {
+  .lado li,
+  .lado a {
     display: none;
   }
   .lado .menu {
@@ -309,8 +307,8 @@ footer .mapa_container a:active {
   main .objetivo .principal {
     padding: 30px;
   }
-  main .objetivo img{
-    margin: 30px
+  main .objetivo img {
+    margin: 30px;
   }
   .principal h1 {
     font-size: 27px;
@@ -372,8 +370,8 @@ footer .mapa_container a:active {
   main .objetivo .principal p {
     font-size: 15px;
   }
-  main .objetivo-row .principal p{
-    font-size:15px;
+  main .objetivo-row .principal p {
+    font-size: 15px;
   }
   .dropdown {
     position: relative;
