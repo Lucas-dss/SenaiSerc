@@ -291,6 +291,8 @@ hr {
   display: flex;
   justify-content: space-between;
   height: 50px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 footer .mapa_container {
   display: flex;
