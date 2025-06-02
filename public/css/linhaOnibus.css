@@ -25,15 +25,18 @@ main .marca {
   right: 10px;
   bottom: 10px;
   background-color: rgba(0, 0, 0, 0.2);
-  align-items: center;
   padding-left: 0;
-  padding-right: 10px;
+}
+main .marca a {
+  display: flex;
+  width: 145px;
+  text-decoration: none;
 }
 main .marca a img {
+  display: flex;
   width: 50px;
   margin-left: 10px;
   margin-right: 10px;
-  display: flex;
 }
 main .marca p {
   color: white;
@@ -484,7 +487,7 @@ textarea {
     filter: invert(20%);
   }
   footer {
-    height: 160px;
+    height: 170px;
     justify-content: space-evenly;
   }
   footer h2 {
@@ -505,7 +508,15 @@ textarea {
     font-size: 10px;
     width: 50px;
   }
+  footer .logos-container {
+    padding: 10px;
+    padding-top: 20px;
+  }
   footer .logos-container img {
     width: 20px;
+  }
+  .direitosAutorais p {
+    font-size: 10px;
+    height: 20px;
   }
 }

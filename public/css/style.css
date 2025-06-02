@@ -33,19 +33,22 @@ main .marca {
   right: 10px;
   bottom: 10px;
   background-color: rgba(0, 0, 0, 0.2);
-  align-items: center;
   padding-left: 0;
-  padding-right: 10px;
+}
+main .marca a {
+  display: flex;
+  width: 145px;
+  text-decoration: none;
 }
 main .marca a img {
+  display: flex;
   width: 50px;
   margin-left: 10px;
   margin-right: 10px;
-  display: flex;
 }
-main .marca p {
-  color: white;
+main .marca a p {
   align-content: center;
+  color: white;
 }
 main .objetivo .principal {
   display: block;
@@ -448,7 +451,7 @@ footer .mapa_container .mapa li a:active {
     filter: invert(20%);
   }
   footer {
-    height: 150px;
+    height: 170px;
     justify-content: space-evenly;
   }
   footer h2 {
