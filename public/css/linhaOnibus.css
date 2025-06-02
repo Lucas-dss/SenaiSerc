@@ -6,6 +6,18 @@ body {
   height: 100dvb;
   min-width: 365px;
 }
+/* SCROLL */
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(30, 30, 173, 0.75);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #9340ff;
+}
 /* COISAS NO MAIN */
 main .marca {
   display: flex;
@@ -295,19 +307,23 @@ footer .mapa_container .mapa {
 footer .mapa_container h2 {
   color: white;
 }
-footer .mapa_container .mapa a {
-  text-decoration: none;
-  color: white;
-}
 footer .mapa li {
   padding-top: 10px;
 }
-footer .mapa_container a:hover {
-  color: #9340ff;
-  transition: 0.1s;
+footer .mapa_container .mapa li a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s;
 }
-footer .mapa_container a:active {
-  color: #ffffff;
+footer .mapa_container .mapa li a:hover {
+  color: #9340ff;
+  transition: all 1s;
+}
+footer .mapa_container .mapa li a:active {
+  border-radius: 50%;
+  box-shadow: #fff 0 0 30px 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
   transition: 0s;
 }
 main {
